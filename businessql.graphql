@@ -1,0 +1,21 @@
+type Subscriber {
+  id: ID!
+  email: String!
+  name: String
+  status: String!
+}
+
+type Query {
+  getSubscriber(groupId: ID!, id: ID, email: String): Subscriber
+}
+
+type Mutation {
+  subscribe(groupId: ID!, email: String!, name: String): Subscriber
+  unsubscribe(groupId: ID!, email: String!): Subscriber
+  updateSubscriber(
+    groupId: ID!
+    id: ID
+    email: String
+    name: String
+  ): Subscriber
+}

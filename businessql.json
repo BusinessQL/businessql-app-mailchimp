@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1-alpha",
+  "nameId": "mailchimp",
+  "name": "Mailchimp",
+  "categories": ["email"],
+  "settings": {
+    "fields": [
+      {
+        "label": "API Key",
+        "name": "apiKey",
+        "type": "password"
+      }
+    ]
+  },
+  "api": {
+    "url": "https://us-east4-bql-production.cloudfunctions.net/mailchimp"
+  },
+  "developer": {
+    "nameId": "businessql"
+  },
+  "logo": "https://raw.githubusercontent.com/BusinessQL/businessql-app-mailchimp/main/images/logo.svg",
+  "theme": {
+    "colors": {
+      "primary": "#FADC44"
+    }
+  }
+}

@@ -1,2 +1,2 @@
 # businessql-app-mailchimp
-Mailchimp - BusinessQL App
+ConvertKit - BusinessQL
