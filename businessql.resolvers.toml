@@ -1,0 +1,14 @@
+[query]
+  [query.getSubscriber]
+  type = "api"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id}"
+  method = "POST"
+
+    [query.getSubscriber.headers]
+      Authorization = "Bearer {data.apiKey}"
+
+    [query.getSubscriber.response]
+      [query.getSubscriber.response.success]
+      id = "{{result.id}}"
+      email = "{{result.email_address}}"
+      name = "{{result.full_name}}"
