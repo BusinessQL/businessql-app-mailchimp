@@ -41,7 +41,7 @@
   # update subscriber
   [mutation.updateSubscriber]
   type = "api"
-  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{groupId}/members/{args.id|args.email}"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id|args.email}"
   method = "POST"
 
     [mutation.updateSubscriber.headers]
