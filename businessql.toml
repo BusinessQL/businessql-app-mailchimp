@@ -1,7 +1,7 @@
 name = "Mailchimp"
 nameId = "mailchimp"
 categories = ["email"]
-version = "0.0.5-alpha"
+version = "0.0.6-alpha"
 logo = "https://raw.githubusercontent.com/BusinessQL/businessql-app-mailchimp/main/images/logo.svg"
 
 [settings]
