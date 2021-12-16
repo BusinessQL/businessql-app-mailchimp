@@ -24,4 +24,8 @@ type Subscriber {
 enum SubscriberStatus {
   subscribed
   unsubscribed
+  cleaned
+  pending
+  transactional
+  archived
 }
