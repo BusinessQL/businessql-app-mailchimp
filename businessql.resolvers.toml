@@ -12,3 +12,4 @@
       id = "{{result.id}}"
       email = "{{result.email_address}}"
       name = "{{result.full_name}}"
+      status = "{{result.status}}"
