@@ -6,7 +6,7 @@ type Subscriber {
 }
 
 type Query {
-  getSubscriber(groupId: ID!, id: ID!): Subscriber
+  getSubscriber(groupId: ID!, id: ID, email: String): Subscriber
 }
 
 type Mutation {
