@@ -37,3 +37,25 @@
       email = "{{result.email_address}}"
       name = "{{result.full_name}}"
       status = "{{result.status}}"
+
+  # update subscriber
+  [mutation.updateSubscriber]
+  type = "api"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{groupId}/members/{id}"
+  method = "POST"
+
+    [mutation.updateSubscriber.headers]
+      Authorization = "Bearer {data.apiKey}"
+
+    [mutation.updateSubscriber.data]
+      email_address = "{{args.email}}"
+      status = "{{args.status|subscribed}}"
+      [mutation.updateSubscriber.data.merge_fields]
+      FNAME = "{{args.name|''}}"
+
+    [mutation.updateSubscriber.response]
+      [mutation.updateSubscriber.response.success]
+      id = "{{result.id}}"
+      email = "{{result.email_address}}"
+      name = "{{result.full_name}}"
+      status = "{{result.status}}"
