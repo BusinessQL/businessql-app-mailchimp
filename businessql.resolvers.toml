@@ -42,7 +42,7 @@
   [mutation.updateSubscriber]
   type = "api"
   url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id|args.email}"
-  method = "POST"
+  method = "PATCH"
 
     [mutation.updateSubscriber.headers]
       Authorization = "Bearer {data.apiKey}"
