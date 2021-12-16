@@ -2,7 +2,7 @@
   [query.getSubscriber]
   type = "api"
   url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id}"
-  method = "POST"
+  method = "GET"
 
     [query.getSubscriber.headers]
       Authorization = "Bearer {data.apiKey}"
