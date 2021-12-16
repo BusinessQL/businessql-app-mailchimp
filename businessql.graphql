@@ -1,10 +1,3 @@
-type Subscriber {
-  id: ID!
-  email: String!
-  name: String
-  status: String!
-}
-
 type Query {
   getSubscriber(groupId: ID!, id: ID, email: String): Subscriber
 }
@@ -17,6 +10,18 @@ type Mutation {
     id: ID
     email: String
     name: String
-    status: String
+    status: SubscriberStatus
   ): Subscriber
+}
+
+type Subscriber {
+  id: ID!
+  email: String!
+  name: String
+  status: SubscriberStatus!
+}
+
+enum SubscriberStatus {
+  subscribed
+  unsubscribed
 }
