@@ -29,7 +29,7 @@
       email_address = "{{args.email}}"
       status = "subscribed"
       [mutation.subscribe.data.merge_fields]
-      FNAME = "{{args.name || ''}}"
+      FNAME = "{{args.name|''}}"
 
     [mutation.subscribe.response]
       [mutation.subscribe.response.success]
