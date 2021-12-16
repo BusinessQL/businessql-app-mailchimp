@@ -14,7 +14,7 @@ type Mutation {
   unsubscribe(groupId: ID!, email: String!): Subscriber
   updateSubscriber(
     groupId: ID!
-    id: ID!
+    id: ID
     email: String
     name: String
     status: String
