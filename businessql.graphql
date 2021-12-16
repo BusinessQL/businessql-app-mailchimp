@@ -4,7 +4,7 @@ type Query {
 
 type Mutation {
   subscribe(groupId: ID!, email: String!, name: String): Subscriber
-  unsubscribe(groupId: ID!, email: String!): Subscriber
+  unsubscribe(groupId: ID!, id: ID, email: String): Subscriber
   updateSubscriber(
     groupId: ID!
     id: ID

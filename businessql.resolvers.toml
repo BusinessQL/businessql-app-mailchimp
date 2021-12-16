@@ -59,3 +59,22 @@
       email = "{{result.email_address}}"
       name = "{{result.full_name}}"
       status = "{{result.status}}"
+
+  # unsubscribe
+  [mutation.unsubscribe]
+  type = "api"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id|args.email}"
+  method = "PATCH"
+
+    [mutation.unsubscribe.headers]
+      Authorization = "Bearer {data.apiKey}"
+
+    [mutation.unsubscribe.data]
+      status = "unsubscribed"
+
+    [mutation.unsubscribe.response]
+      [mutation.unsubscribe.response.success]
+      id = "{{result.id}}"
+      email = "{{result.email_address}}"
+      name = "{{result.full_name}}"
+      status = "{{result.status}}"
