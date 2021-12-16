@@ -1,4 +1,5 @@
 [query]
+  # get subscriber
   [query.getSubscriber]
   type = "api"
   url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id}"
@@ -9,6 +10,29 @@
 
     [query.getSubscriber.response]
       [query.getSubscriber.response.success]
+      id = "{{result.id}}"
+      email = "{{result.email_address}}"
+      name = "{{result.full_name}}"
+      status = "{{result.status}}"
+  
+[mutation]
+  # subscribe
+  [mutation.subscribe]
+  type = "api"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{groupId}/members"
+  method = "POST"
+
+    [mutation.subscribe.headers]
+      Authorization = "Bearer {data.apiKey}"
+
+    [mutation.subscribe.data]
+      email_address = "{{args.email}}"
+      status = "subscribed"
+      [mutation.subscribe.data.merge_fields]
+      FNAME = "{{args.name}}"
+
+    [mutation.subscribe.response]
+      [mutation.subscribe.response.success]
       id = "{{result.id}}"
       email = "{{result.email_address}}"
       name = "{{result.full_name}}"
