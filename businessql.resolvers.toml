@@ -19,7 +19,7 @@
   # subscribe
   [mutation.subscribe]
   type = "api"
-  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{groupId}/members"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members"
   method = "POST"
 
     [mutation.subscribe.headers]
