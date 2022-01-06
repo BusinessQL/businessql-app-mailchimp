@@ -1,7 +1,7 @@
 name = "Mailchimp"
 nameId = "mailchimp"
 categories = ["email"]
-version = "0.0.15-alpha"
+version = "0.1.0-alpha"
 logo = "https://raw.githubusercontent.com/BusinessQL/businessql-app-mailchimp/main/images/logo.svg"
 
 [settings]
@@ -15,6 +15,11 @@ logo = "https://raw.githubusercontent.com/BusinessQL/businessql-app-mailchimp/ma
   label = "API Key"
   name = "apiKey"
   type = "password"
+
+  [[settings.fields]]
+  label = "Default Group ID"
+  name = "defaultGroupId"
+  type = "text"
 
 [developer]
 nameId = "businessql"

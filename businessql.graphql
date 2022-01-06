@@ -1,12 +1,12 @@
 type Query {
-  getSubscriber(groupId: ID!, id: ID, email: String): Subscriber
+  getSubscriber(groupId: ID, id: ID, email: String): Subscriber
 }
 
 type Mutation {
-  subscribe(groupId: ID!, email: String!, name: String): Subscriber
-  unsubscribe(groupId: ID!, id: ID, email: String): Subscriber
+  subscribe(groupId: ID, email: String!, name: String): Subscriber
+  unsubscribe(groupId: ID, id: ID, email: String): Subscriber
   updateSubscriber(
-    groupId: ID!
+    groupId: ID
     id: ID
     email: String
     name: String

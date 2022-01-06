@@ -2,7 +2,7 @@
   # get subscriber
   [query.getSubscriber]
   type = "api"
-  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id|args.email}"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId|data.defaultGroupId}/members/{args.id|args.email}"
   method = "GET"
 
     [query.getSubscriber.headers]
@@ -19,7 +19,7 @@
   # subscribe
   [mutation.subscribe]
   type = "api"
-  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId|data.defaultGroupId}/members"
   method = "POST"
 
     [mutation.subscribe.headers]
@@ -41,7 +41,7 @@
   # update subscriber
   [mutation.updateSubscriber]
   type = "api"
-  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id|args.email}"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId|data.defaultGroupId}/members/{args.id|args.email}"
   method = "PATCH"
 
     [mutation.updateSubscriber.headers]
@@ -63,7 +63,7 @@
   # unsubscribe
   [mutation.unsubscribe]
   type = "api"
-  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId}/members/{args.id|args.email}"
+  url = "https://{data.dataCenter}.api.mailchimp.com/3.0/lists/{args.groupId|data.defaultGroupId}/members/{args.id|args.email}"
   method = "PATCH"
 
     [mutation.unsubscribe.headers]
